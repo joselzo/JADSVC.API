@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=DESKTOP-SE1QL0U;Initial Catalog=JADSVCS;Integrated Security=True;;TrustServerCertificate = true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir DataDB -f
