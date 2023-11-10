@@ -21,6 +21,7 @@ namespace JAD.API.Extensions.Injection
             services.AddScoped<IspgetLevelsandFeaturesRepository, spgetLevelsandFeaturesRepository>();
             services.AddScoped<ISPGetFeatureByIdUserRepository, SPGetFeatureByIdUserRepository>();
             services.AddScoped<IspGetServiceOrderByIdUserRepository, spGetServiceOrderByIdUserRepository>();
+            services.AddScoped<IServiceOrderFeatureRepository, ServiceOrderFeatureRepository>();
             return services;
         }
     }

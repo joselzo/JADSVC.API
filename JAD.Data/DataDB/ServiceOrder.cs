@@ -25,6 +25,7 @@ public partial class ServiceOrder
 
     public decimal? FeeAmount { get; set; }
 
+
     public virtual Service? Service { get; set; }
 
     public virtual ServiceLevel? ServiceLevel { get; set; }

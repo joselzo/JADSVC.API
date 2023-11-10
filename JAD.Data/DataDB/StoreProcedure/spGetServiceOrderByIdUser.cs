@@ -22,6 +22,6 @@ namespace JADSVC.Data.DataDB.StoreProcedure
         public string ServiceName { get; set; }
         public string ServiceLevelName { get; set; }
         public string Status { get; set; }
-        public decimal FeeAmount { get; set; }
+        public decimal? FeeAmount { get; set; }
     }
 }

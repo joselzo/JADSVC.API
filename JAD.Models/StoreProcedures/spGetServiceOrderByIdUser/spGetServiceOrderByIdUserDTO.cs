@@ -17,9 +17,9 @@ namespace JADSVC.Models.StoreProcedures.spGetServiceOrderByIdUser
         public int ServiceLevelID { get; set; }
         public decimal Amount { get; set; }
         public int TxnID { get; set; }
-        public string ServiceName { get; set; }
-        public string ServiceLevelName { get; set; }
-        public string Status { get; set; }
-        public decimal FeeAmount { get; set; }
+        public string? ServiceName { get; set; }
+        public string? ServiceLevelName { get; set; }
+        public string? Status { get; set; }
+        public decimal? FeeAmount { get; set; }
     }
 }

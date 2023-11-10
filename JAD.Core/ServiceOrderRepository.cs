@@ -25,6 +25,16 @@ namespace JAD.Core
                 var ServiceOrder = _mapper.Map<ServiceOrder>(ServiceOrderDTO); // Mapea el DTO a la entidad
                 _context.ServiceOrders.Add(ServiceOrder);
                 await _context.SaveChangesAsync();
+
+                foreach (var item in ServiceOrderDTO.Features)
+                {
+                    item.ServiceOrderId = ServiceOrder.Id;
+                    var features = _mapper.Map<ServiceOrderFeature>(item); // Mapea el DTO a la entidad
+                    _context.ServiceOrderFeatures.Add(features);
+                    await _context.SaveChangesAsync();
+                }
+
+
                 var result = _mapper.Map<ServiceOrderDTO>(ServiceOrder);
                 return result;
             }

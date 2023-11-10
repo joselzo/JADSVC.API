@@ -20,6 +20,7 @@ namespace JAD.API.Extensions.Mapper
             CreateMap<ServiceOrder, ServiceOrderDTO>().ReverseMap();
             CreateMap<StateChange, StateChangeDTO>().ReverseMap();
             CreateMap<UserFeature, UserFeatureDTO>().ReverseMap();
+            CreateMap<ServiceOrderFeature, ServiceOrderFeatureDTO>().ReverseMap();
 
             //STORED PROCEDURES
             CreateMap<SPGetUser, SPGetUserDTO>().ReverseMap();
