@@ -82,6 +82,23 @@ namespace JAD.Core
             return true;
         }
 
-        
+        public async Task<List<ServiceOrderFeatureDTO>> GetServiceOrderFeaturesByServiceOrderIdAsync(int id)
+        {
+            try
+            {
+                var serviceOrderFeatures = await _context.ServiceOrderFeatures
+                    .Where(sof => sof.ServiceOrderId == id)
+                    .ToListAsync();
+
+                return _mapper.Map<List<ServiceOrderFeatureDTO>>(serviceOrderFeatures);
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción según tus necesidades
+                return null;
+            }
+        }
+
+
     }
 }

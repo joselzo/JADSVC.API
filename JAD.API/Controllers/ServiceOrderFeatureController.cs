@@ -93,7 +93,18 @@ namespace JAD.API.Controllers
             return StatusCode(500); // Cambia esto a un código de error adecuado si es necesario.
         }
 
+        [HttpGet("GetServiceOrderFeaturesByServiceOrderId/{id}")]
+        public async Task<ActionResult<ServiceOrderFeatureDTO>> GetServiceOrderFeaturesByServiceOrderId(int id)
+        {
+            var ServiceOrderFeature = await _ServiceOrderFeatureRepository.GetServiceOrderFeaturesByServiceOrderIdAsync(id);
+            if (ServiceOrderFeature == null)
+            {
+                return NotFound();
+            }
 
-        
+            return Ok(ServiceOrderFeature);
+        }
+
+
     }
 }

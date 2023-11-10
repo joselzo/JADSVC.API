@@ -22,6 +22,9 @@ namespace JADSVC.Intefaces
         // Delete
         Task<bool> DeleteServiceOrderFeatureAsync(int id);
 
-      
+        Task<List<ServiceOrderFeatureDTO>> GetServiceOrderFeaturesByServiceOrderIdAsync(int serviceOrderId);
+
+
+
     }
 }
